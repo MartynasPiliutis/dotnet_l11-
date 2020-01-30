@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserManagerLibrary
 {
-    public class Rights
+    public class Right
     {
         public int RightsID { get; set; }
         public string RightsCode
@@ -31,7 +31,7 @@ namespace UserManagerLibrary
             }
         }
 
-        public Rights(int rights_id)
+        public Right(int rights_id)
         {
             if (rights_id >= 0 && rights_id <= 2)
             {

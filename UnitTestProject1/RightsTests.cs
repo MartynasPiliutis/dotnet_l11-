@@ -11,7 +11,7 @@ namespace UserManagerTests
         public void PatikrinameArPateikusUserRighIDYra2GausimeFullAccessRights()
         {
             //Assing
-            Rights rights = new Rights(2);
+            Right rights = new Right(2);
             //Act
             string rightCode = rights.RightsCode;
             //Assert
@@ -22,7 +22,7 @@ namespace UserManagerTests
         public void PatikrinameArPateikusUserRighIDYraBetKoksSimbolisGausimeReadOnlyAccess()
         {
             //Assing
-            Rights rights = new Rights(5);
+            Right rights = new Right(5);
             //Act
             string rightCode = rights.RightsCode;
             //Assert

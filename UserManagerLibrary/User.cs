@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace UserManagerLibrary
 {
-    public class Users
+    public class User
     {
         public int UserID { get; private set; }
         public string UserName { get; set; }
 
-        private Rights UserRight;
+        private Right UserRight;
 
-        public Users(int _userid, string _userName, Rights _userRight)
+        public User(int userid, string userName, Right userRight)
         {
-            UserID = _userid;
-            UserName = _userName;
-            UserRight = _userRight;
+            UserID = userid;
+            UserName = userName;
+            UserRight = userRight;
         }
 
-        public void ChangeUserRights(Rights _changeRights)
+        public void ChangeUserRights(Right changeRights)
         {
-            UserRight = _changeRights;
+            UserRight = changeRights;
         }
 
         public string GetUserRights()

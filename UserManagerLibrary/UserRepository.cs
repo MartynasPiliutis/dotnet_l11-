@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserManagerLibrary
 {
-    class UserRepository
+    public class UserRepository
     {
         private List<User> UsersList;
 

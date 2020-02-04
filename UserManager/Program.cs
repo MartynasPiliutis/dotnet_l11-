@@ -102,6 +102,22 @@ namespace UserManager
 
             Console.ReadLine();
 
+            Console.Clear();
+            Console.WriteLine("Iveskite vartotojo ID:");
+            int vartotojoIdRedaguoti = Convert.ToInt32(Console.ReadLine());
+
+            User ieskomasVartotojasRedaguoti = userRepository.GetUserByID(vartotojoIdRedaguoti);
+            Console.WriteLine("Jusu ieskotas vartotojas:");
+            Console.WriteLine($"{ieskomasVartotojasRedaguoti.UserID} {ieskomasVartotojasRedaguoti.UserName} {ieskomasVartotojasRedaguoti.GetUserRightsID()}");
+
+            Console.WriteLine("Pasirinkite, kokias naujas teises suteikti siam vartotojui:");
+            Console.WriteLine("0 - Read Only; 1 - Approve/Reject; 2 - Full Access");
+            int naujosTeises = Convert.ToInt32(Console.ReadLine());
+            ieskomasVartotojasRedaguoti.ChangeUserRights(new Right(naujosTeises));
+            Console.WriteLine("Vartotojo naujos teises:");
+            Console.WriteLine($"{ieskomasVartotojasRedaguoti.UserID} {ieskomasVartotojasRedaguoti.UserName} {ieskomasVartotojasRedaguoti.GetUserRightsID()}");
+            Console.ReadLine();
+
         }
     }
 }

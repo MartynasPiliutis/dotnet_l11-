@@ -8,7 +8,7 @@ namespace UserManagerLibrary
 {
     public class Right
     {
-        public int RightsID { get; set; }
+        public int RightsID { get; private set; }
         public string RightsCode
         {
             get
@@ -30,6 +30,7 @@ namespace UserManagerLibrary
                 }
             }
         }
+
 
         public Right(int rights_id)
         {

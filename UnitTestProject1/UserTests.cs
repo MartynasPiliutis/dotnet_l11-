@@ -15,7 +15,7 @@ namespace UserManagerTests
             //Act
             int testuserid = newUser1.UserID;
             string testusername = newUser1.UserName;
-            string testuserrights = newUser1.GetUserRights();
+            string testuserrights = newUser1.GetUserRightsCode();
             //Assert
             Assert.AreEqual(testuserid, 001);
             Assert.AreEqual(testusername, "Vardas_Pavarde");
@@ -28,7 +28,7 @@ namespace UserManagerTests
             User newUser2 = new User(001, "Vardas_Pavarde", new Right(1));
             //Act
             newUser2.ChangeUserRights(new Right(0));
-            string testuserrights = newUser2.GetUserRights();
+            string testuserrights = newUser2.GetUserRightsCode();
             //Assert
             Assert.AreEqual(testuserrights, "READ_ONLY");
         }

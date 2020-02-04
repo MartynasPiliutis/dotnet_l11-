@@ -45,14 +45,14 @@ namespace UserManagerLibrary
         public void AddNewUser(int newUserId, string newUserName, int newUserRight)
         {
             User newUserCheck = GetUserByID(newUserId);
-            if (newUserCheck != null)
+            if (newUserCheck == null)
             {
                 UsersList.Add(new User(newUserId, newUserName, new Right(newUserRight)));
             }
             else return;
         }
 
-        public void DeleteUser(int deleteUserId)
+        public void DeleteUserByID(int deleteUserId)
         {
             User deleteUserCheck = GetUserByID(deleteUserId);
             if (deleteUserCheck != null)

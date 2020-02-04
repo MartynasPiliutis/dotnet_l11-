@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReportGenerator.cs" />
+    <Compile Include="ReportItem.cs" />
     <Compile Include="UserRepository.cs" />
-    <Compile Include="Users.cs" />
-    <Compile Include="Rights.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Right.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

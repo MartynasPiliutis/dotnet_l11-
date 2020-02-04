@@ -25,9 +25,14 @@ namespace UserManagerLibrary
             UserRight = changeRights;
         }
 
-        public string GetUserRights()
+        public string GetUserRightsCode()
         {
             return UserRight.RightsCode;
+        }
+
+        public int GetUserRightsID()
+        {
+            return UserRight.RightsID;
         }
     }
 }
